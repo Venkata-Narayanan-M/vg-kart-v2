@@ -8,7 +8,7 @@ import {
 import { UserContext } from "../../contexts/user.context";
 
 import FormInput from "../form-input/FormInput.Component";
-import Button from "../button/Button.Component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button.Component";
 
 import "./SignUpForm.Styles.scss";
 
@@ -94,7 +94,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           onChange={handleChange}
         />
-        <Button buttonType="default" type="submit">
+        <Button buttonType={BUTTON_TYPE_CLASSES.base} type="submit">
           Sign Up
         </Button>
       </form>

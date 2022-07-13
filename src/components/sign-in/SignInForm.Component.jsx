@@ -7,7 +7,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/FormInput.Component";
-import Button from "../button/Button.Component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button.Component";
 
 // import { UserContext } from "../../contexts/user.context";
 
@@ -81,10 +81,14 @@ const SignInForm = () => {
           onChange={handleChange}
         />
         <div className="buttons-container">
-          <Button buttonType="default" type="submit">
+          <Button buttonType={BUTTON_TYPE_CLASSES.base} type="submit">
             Sign In
           </Button>
-          <Button type="button" onClick={logGoogleUser} buttonType="google">
+          <Button
+            type="button"
+            onClick={logGoogleUser}
+            buttonType={BUTTON_TYPE_CLASSES.google}
+          >
             Google Sign In
           </Button>
         </div>
